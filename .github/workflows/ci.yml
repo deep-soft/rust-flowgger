@@ -1,13 +1,16 @@
 name: CI Build
 
 on:
-  pull_request:
-  push:
-    branches:
-      - /^\d+\.\d+\.\d+.*$/
-      - master
-      - /^bug\/.*/
-      - \^feature\/.*
+  workflow_dispatch:
+
+#on:
+#  pull_request:
+#  push:
+#    branches:
+#      - /^\d+\.\d+\.\d+.*$/
+#      - master
+#      - /^bug\/.*/
+#      - \^feature\/.*
 
 env:
   FLOWGGER_FEATURES: "syslog kafka-output file redis tls gelf ltsv"
